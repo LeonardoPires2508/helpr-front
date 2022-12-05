@@ -24,4 +24,13 @@ export class ClientesComponent implements OnInit {
     })
   }
 
+  public delete(id: number): void {
+    let ok = confirm("Tem certeza que deseja excluir?")
+      if(ok) {
+        this.clienteService.delete(id).subscribe(() =>{
+          alert("Cliente excluido!");
+          this.initializeTable();
+        });
+      }
+  }
 }
