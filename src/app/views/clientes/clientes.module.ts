@@ -6,20 +6,23 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { NewClienteComponent } from './new-cliente/new-cliente.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditClienteComponent } from './edit-cliente/edit-cliente.component';
 
 
 @NgModule({
   declarations: [
     ClientesComponent,
-    NewClienteComponent
+    NewClienteComponent,
+    EditClienteComponent
   ],
   imports: [
     CommonModule,
     ClientesRoutingModule,
     ComponentsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ClientesModule { }
